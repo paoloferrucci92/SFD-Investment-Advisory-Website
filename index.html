@@ -295,6 +295,12 @@ footer{background:var(--navy);padding:2.5rem 4rem;display:flex;align-items:cente
           <button class="service-link" onclick="showPage('servizi')">Scopri di più</button>
         </div>
       </div>
+
+      <div class="reveal" style="margin-top:3.5rem;padding:2.5rem 3rem;border-left:2px solid var(--gold);background:var(--white);">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--navy);margin-bottom:1rem;">Perché costa così poco?</p>
+        <p style="font-size:0.92rem;color:var(--muted);line-height:1.85;">Perché questo è un progetto che affianco ad altre attività professionali; non ho una struttura da mantenere né costi fissi da scaricare sul cliente. Ma c'è un motivo più importante: quando si hanno patrimoni sotto i 500.000,00, pagare più di 500,00€ all'anno per una consulenza è un costo che non ha senso rispetto al capitale investito. L'obiettivo non è massimizzare il mio compenso, ma aiutarti a iniziare. Investire non significa solo comprare un o più strumenti finanziari ma significa capire come funziona il sistema economico, perché chi possiede già grandi capitali riesce a moltiplicarli più facilmente, e come anche tu puoi costruire qualcosa nel tempo partendo da dove sei oggi.</p>
+      </div>
+
     </div>
   </section>
 
@@ -595,10 +601,6 @@ footer{background:var(--navy);padding:2.5rem 4rem;display:flex;align-items:cente
           <p>La mia consulenza è personalizzata, trasparente e flessibile: anche se svolgo questa attività part-time, ogni cliente riceve un supporto dedicato e strategie studiate su misura, con l'obiettivo di massimizzare rendimento, ridurre i costi e costruire un percorso finanziario sostenibile.</p>
           <p>Parlo fluentemente <strong>italiano, inglese e francese</strong>, e metto la mia esperienza internazionale al servizio di soluzioni eleganti, efficienti e orientate ai risultati.</p>
           <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(201,169,110,0.2);">
-            <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--navy);font-weight:300;margin-bottom:1.5rem;">Professionalità &amp; Competenza</h3>
-            <p style="color:var(--muted);font-size:0.9rem;margin-bottom:1.5rem;">Alcune delle aziende in cui ho lavorato e/o collaborato, e istituti/enti di formazione.</p>
-          </div>
-          <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(201,169,110,0.2);">
             <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--navy);font-weight:300;margin-bottom:1.5rem;">Articoli &amp; Pubblicazioni</h3>
             <div class="pub-item"><span class="pub-year">2025</span><div><div class="pub-title"><a href="https://www.linkedin.com/pulse/business-case-mifid-ii-compliance-made-simple-from-paolo-ferrucci-u1hsf/" target="_blank">Business Case. MiFID II Compliance Made Simple: Automating Financial Advisory from Questionnaire to Portfolio</a></div></div></div>
             <div class="pub-item"><span class="pub-year">2025</span><div><div class="pub-title"><a href="https://www.linkedin.com/pulse/future-proofing-finance-why-dora-just-beginning-paolo-ferrucci-qwpof/" target="_blank">Future-Proofing Finance: Why DORA Is Just the Beginning</a></div></div></div>
@@ -770,7 +772,6 @@ function showPage(id) {
       ctx.clearRect(0,0,W,H);
       var LINES=16;
       for(var l=0;l<LINES;l++){
-        // each line has its own slow vertical drift centered around H/2
         var vertDrift = Math.sin(t*0.4 + l*0.7)*22;
         var yCenter = H/2 + vertDrift;
         var alpha = 0.06 + 0.1*(1 - Math.abs(l-(LINES-1)/2)/((LINES-1)/2));
@@ -780,7 +781,6 @@ function showPage(id) {
         var steps=120;
         for(var i=0;i<=steps;i++){
           var x = (i/steps)*W;
-          // two slow sine waves per line, no horizontal travel
           var y = yCenter
             + Math.sin(i/steps*Math.PI*3 + t*0.5 + l*0.45)*18
             + Math.sin(i/steps*Math.PI*5 + t*0.3 + l*0.3)*9;
