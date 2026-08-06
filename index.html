@@ -272,7 +272,13 @@ footer{background:var(--navy);padding:2.5rem 4rem;display:flex;align-items:cente
     <li><button onclick="showPage('prenota')">Prenota</button></li>
     <li><button onclick="showPage('chisono')">Chi Sono</button></li>
     <li><button onclick="showPage('disclaimer')">Informative</button></li>
-    <li><button onclick="showPage('global')">SFD Global</button></li>
+    <li class="nav-dropdown">
+      <button onclick="showPage('global-consulenza')">SFD Global ▾</button>
+      <div class="nav-dropdown-menu">
+        <button onclick="showPage('global-consulenza')">Consulenza Strategica e Aziendale</button>
+        <button onclick="showPage('global-holding')">Il Progetto Holding</button>
+      </div>
+    </li>
     <li><a href="#" class="nav-cta" id="accedi-link">Accedi</a></li>
   </ul>
 </nav>
@@ -1023,11 +1029,41 @@ footer{background:var(--navy);padding:2.5rem 4rem;display:flex;align-items:cente
   <footer><span class="footer-logo" onclick="showPage('home')"><img src="assets/logo.png" alt="SFD Logo" class="footer-logo-img">SFD - Investment Advisory</span><ul class="footer-links"><li><button onclick="showPage('home')">Home</button></li><li><button onclick="showPage('servizi')">Servizi</button></li><li><button onclick="showPage('prenota')">Prenota</button></li><li><button onclick="showPage('disclaimer')">Disclaimer</button></li><li><button onclick="showPage('chisono')">Chi Sono</button></li></ul><p class="footer-copy">© 2026 SFD - Investment Advisory</p></footer>
 </div>
 
-<!-- ═══════════ SFD GLOBAL ═══════════ -->
-<div id="page-global" class="page">
+<!-- ═══════════ SFD GLOBAL · CONSULENZA STRATEGICA E AZIENDALE ═══════════ -->
+<div id="page-global-consulenza" class="page">
   <div class="page-hero">
-    <span class="page-hero-label">SFD Global</span>
-    <h1>SFD – Global</h1>
+    <span class="page-hero-label">SFD Global · Consulenza</span>
+    <h1>Consulenza Strategica e Aziendale</h1>
+    <p>Analisi, pianificazione e supporto strategico per imprese, startup e organizzazioni</p>
+  </div>
+  <div style="background:var(--navy);overflow:hidden;line-height:0;">
+    <canvas id="growthCanvas" style="width:100%;height:180px;display:block;"></canvas>
+  </div>
+  <section style="background:var(--white)">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Aree di Intervento</span>
+        <h2 class="section-title">Competenza al servizio della crescita aziendale</h2>
+        <p style="color:var(--muted);max-width:650px;line-height:1.8;margin-bottom:3rem;">Accanto alla consulenza finanziaria indipendente rivolta ai privati, offro attività di consulenza strategica e aziendale rivolta a imprese, startup e organizzazioni, con un approccio concreto e orientato ai risultati.</p>
+      </div>
+      <div class="services-grid reveal">
+        <div class="service-card"><h3>Analisi Economico-Finanziarie</h3><p>Valutazione della struttura economico-finanziaria d'impresa, con indicatori chiari a supporto delle decisioni strategiche.</p></div>
+        <div class="service-card"><h3>Trasformazione Digitale</h3><p>Supporto a imprese e organizzazioni nei processi di digitalizzazione, dalla definizione della roadmap all'implementazione.</p></div>
+        <div class="service-card"><h3>Business Plan per Startup</h3><p>Predisposizione di business plan strutturati, utili a validare il modello di business e a dialogare con investitori e istituti di credito.</p></div>
+        <div class="service-card"><h3>Analisi di Sostenibilità Economica</h3><p>Verifica della sostenibilità economico-finanziaria di progetti e iniziative imprenditoriali nel medio-lungo periodo.</p></div>
+        <div class="service-card"><h3>Pianificazione Finanziaria Aziendale</h3><p>Definizione di piani finanziari a supporto della crescita, della gestione della liquidità e delle decisioni di investimento.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cta-strip"><div class="container reveal"><h2>Un progetto da valutare o un'esigenza da affrontare?</h2><a href="mailto:paolo.ferrucci@sfd-advisory.it?subject=Richiesta%20consulenza%20strategica%20e%20aziendale" class="cta-btn">Richiedi una consulenza</a></div></section>
+  <footer><span class="footer-logo" onclick="showPage('home')"><img src="assets/logo.png" alt="SFD Logo" class="footer-logo-img">SFD - Investment Advisory</span><ul class="footer-links"><li><button onclick="showPage('home')">Home</button></li><li><button onclick="showPage('servizi')">Servizi</button></li><li><button onclick="showPage('prenota')">Prenota</button></li><li><button onclick="showPage('disclaimer')">Disclaimer</button></li><li><button onclick="showPage('chisono')">Chi Sono</button></li></ul><p class="footer-copy">© 2026 SFD - Investment Advisory</p></footer>
+</div>
+
+<!-- ═══════════ SFD GLOBAL · IL PROGETTO HOLDING ═══════════ -->
+<div id="page-global-holding" class="page">
+  <div class="page-hero">
+    <span class="page-hero-label">SFD Global · Il Progetto</span>
+    <h1>Il Progetto Holding</h1>
     <p></p>
   </div>
   <div style="background:var(--navy);overflow:hidden;line-height:0;">
@@ -1037,13 +1073,13 @@ footer{background:var(--navy);padding:2.5rem 4rem;display:flex;align-items:cente
     <div class="container" style="text-align:center;">
       <div class="coming-soon-badge">Coming Soon</div>
       <h2 class="section-title section-title-white reveal">Un progetto in fase di studio e sviluppo</h2>
-      <p class="mission-body reveal" style="margin-bottom:2rem;">SFD Global nasce come evoluzione naturale di SFD Advisory. L'obiettivo è costruire nel tempo una piattaforma indipendente di allocazione del capitale, basata su competenza, disciplina e orizzonte di lungo periodo.</p>
+      <p class="mission-body reveal" style="margin-bottom:2rem;">SFD Global nasce come evoluzione naturale dell'attività svolta attraverso SFD Advisory. L'obiettivo è costituire nel tempo una holding di partecipazioni: una società in cui far confluire gli utili generati dalle attività imprenditoriali, per allocarli in modo disciplinato e con un orizzonte di lungo periodo.</p>
       <p class="mission-body reveal" style="margin-bottom:2rem;">Il progetto mira a favorire un utilizzo più razionale e coerente del capitale, mettendo in relazione imprenditori, investitori e competenze, con una logica industriale e non speculativa.</p>
       <p class="mission-body reveal">SFD Global è un progetto in fase di studio e sviluppo. Le attività attuali si concentrano esclusivamente su SFD Advisory.</p>
       <div class="global-pillars reveal" style="margin-top:4rem;text-align:left;">
-        <div class="pillar-card"><div class="pillar-icon">◈</div><h4>Allocazione del Capitale</h4><p>Una piattaforma indipendente basata su competenza, disciplina e visione di lungo periodo.</p></div>
+        <div class="pillar-card"><div class="pillar-icon">◈</div><h4>Capitalizzazione degli Utili</h4><p>Gli utili generati dalle attività imprenditoriali confluiscono nella holding per essere allocati in modo disciplinato nel tempo.</p></div>
         <div class="pillar-card"><div class="pillar-icon">◇</div><h4>Logica Industriale</h4><p>Non speculativa. Mettere in relazione imprenditori, investitori e competenze in modo strutturato.</p></div>
-        <div class="pillar-card"><div class="pillar-icon">○</div><h4>Evoluzione di SFD</h4><p>Un naturale ampliamento dell'approccio SFD Advisory verso mercati e investitori più complessi.</p></div>
+        <div class="pillar-card"><div class="pillar-icon">○</div><h4>Apertura Graduale a Soci</h4><p>Un ampliamento naturale, nel tempo, a soci di capitale che condividano la stessa visione di lungo periodo.</p></div>
       </div>
       <div style="margin-top:4rem;padding:2rem;background:rgba(201,169,110,0.05);border:1px solid rgba(201,169,110,0.15);border-radius:3px;max-width:600px;margin-left:auto;margin-right:auto;" class="reveal">
         <p style="color:rgba(248,249,250,0.5);font-size:0.9rem;line-height:1.8;">Per informazioni o per essere aggiornato sugli sviluppi di SFD Global, contattaci direttamente.</p>
@@ -1167,6 +1203,45 @@ function showPage(id) {
     draw();
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initWaves);}else{setTimeout(initWaves,100);}
+})();
+
+// Ascending growth-lines canvas (SFD Global - Consulenza)
+(function(){
+  function initGrowth(){
+    var c=document.getElementById('growthCanvas');
+    if(!c)return;
+    var p=c.parentElement;
+    function resize(){c.width=p.offsetWidth||1200;c.height=180;}
+    resize();
+    window.addEventListener('resize',resize,{passive:true});
+    var ctx=c.getContext('2d');
+    var t=0;
+    var LINES=9;
+    function draw(){
+      var W=c.width,H=c.height;
+      ctx.clearRect(0,0,W,H);
+      for(var l=0;l<LINES;l++){
+        var seed=l*0.9;
+        var alpha=0.05+0.11*(1-Math.abs(l-(LINES-1)/2)/((LINES-1)/2));
+        ctx.strokeStyle='rgba(201,169,110,'+alpha.toFixed(3)+')';
+        ctx.lineWidth=0.9;
+        ctx.beginPath();
+        var steps=120;
+        for(var i=0;i<=steps;i++){
+          var x=(i/steps)*W;
+          var trend=(i/steps)*H*0.55;
+          var wob=Math.sin(i/steps*Math.PI*3+t*0.6+seed)*10+Math.sin(i/steps*Math.PI*6+t*0.35+seed*1.4)*5;
+          var y=H*0.82-trend+wob;
+          if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);
+        }
+        ctx.stroke();
+      }
+      t+=0.01;
+      requestAnimationFrame(draw);
+    }
+    draw();
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initGrowth);}else{setTimeout(initGrowth,100);}
 })();
 
 (function(){
