@@ -38,6 +38,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-dropdown{position:relative}
 .nav-dropdown-row{display:inline-flex;align-items:center;width:-webkit-fit-content;width:fit-content}
 .nav-dropdown-row button{flex:none;width:auto}
+.nav-dropdown-row button:first-child{padding-right:0.15rem}
+.nav-dropdown-row .nav-dropdown-arrow{padding-left:0.15rem}
 .nav-dropdown-arrow{flex:0 0 auto}
 .nav-dropdown-menu{display:none;position:absolute;top:100%;left:0;background:var(--navy-mid);border:1px solid rgba(201,169,110,0.15);border-top:2px solid var(--gold);min-width:230px;padding:0.5rem 0;z-index:200}
 .nav-dropdown:hover .nav-dropdown-menu{display:block}
